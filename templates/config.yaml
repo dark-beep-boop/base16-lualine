@@ -1,3 +1,7 @@
 default:
 	extension: .lua
 	output: themes
+
+no-background:
+	extension: .lua
+	output: themes

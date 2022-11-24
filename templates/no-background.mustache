@@ -1,0 +1,48 @@
+## {{scheme-name}} theme
+## by {{scheme-author}}
+
+local colors = {
+  black        = '#{{base0E-hex}}',
+  white        = '#{{base07-hex}}',
+  red          = '#{{base08-hex}}',
+  green        = '#{{base0A-hex}}',
+  blue         = '#{{base05-hex}}',
+  yellow       = '#{{base0D-hex}}',
+  gray         = '#{{base00-hex}}',
+  darkgray     = '#{{base01-hex}}',
+  lightgray    = '#{{base03-hex}}',
+  inactivegray = '#{{base02-hex}}',
+}
+return {
+  normal = {
+    a = {bg = colors.gray, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.darkgray, fg = colors.gray}
+  },
+  insert = {
+    a = {bg = colors.blue, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.lightgray, fg = colors.white}
+  },
+  visual = {
+    a = {bg = colors.yellow, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.inactivegray, fg = colors.black}
+  },
+  replace = {
+    a = {bg = colors.red, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.black, fg = colors.white}
+  },
+  command = {
+    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.inactivegray, fg = colors.black}
+  },
+  inactive = {
+    a = {bg = colors.darkgray, fg = colors.gray, gui = 'bold'},
+    b = {bg = colors.darkgray, fg = colors.gray},
+    c = {bg = colors.darkgray, fg = colors.gray}
+  }
+}
+require('lualine').setup {options = {theme = gruvbox}}
